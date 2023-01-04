@@ -12,7 +12,7 @@
       </thead>
       <tbody>
         <tr>
-          <td><%= image_tag user.get_profile_image(100,100) %></td>
+          <td><%= image_tag user.get_profile_image, size:"100,100" %></td>
           <td><%= user.name %></td>
           <td>フォロー数：<%= user.followings.count %></td>
           <td>フォロワー数:<%= user.followers.count %></td>
