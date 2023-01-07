@@ -1,0 +1,25 @@
+<% if book.favorited_by?(current_user) %>
+  <%= link_to book_favorites_path(book), method: :delete do %>
+    <i class="fas fa-heart" aria-hidden="true" style="color: red;"></i>
+    <%= book.favorites.count %> いいね
+  <% end %>
+<% else %>
+  <%= link_to book_favorites_path(book), method: :post do %>
+    <i class="fas fa-heart" aria-hidden="true"></i>
+    <%= book.favorites.count %> いいね
+  <% end %>
+<% end %>
+
+ <% if book.favorited_by?(current_user) %>
+  <p>
+   <%= link_to book_favorites_path(book), method: :delete do %>
+     <i class="fas fa-star" style="color: gold"></i><%= book.favorites.count %>
+   <% end %>
+   </p>
+<% else %>
+  <p>
+   <%= link_to book_favorites_path(book), method: :post do %>
+     <i class="fas fa-star"></i><%= book.favorites.count %>
+   <% end %>
+  </p>
+<% end %>
