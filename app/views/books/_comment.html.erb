@@ -13,9 +13,7 @@
       </td>
       <td>
         <% if book_comment.user == current_user %>
-        <div id="comment_delete">
           <%= link_to "削除", book_book_comment_path(book_comment.book, book_comment), method: :delete, remote: true, class: "btn btn-danger btn-sm", data: { confirm: '本当に消しますか？' } %>
-         </div>
         <% end %>
       </td>
     </tr>
@@ -23,6 +21,3 @@
   </tbody>
 </table>
 
-<div id= "book_comment_form">
-  <%= render "book_comments/book_comment_form", book: book, comment: comment %>
-</div>

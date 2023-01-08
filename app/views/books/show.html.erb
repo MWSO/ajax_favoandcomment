@@ -37,9 +37,12 @@
            <li><%= message %></li>
           <% end %>
       <% end %>
-      <div id= "new_comment">
+      <div id= "comment_index">
         <%= render "comment", book: @book, comment: @comment %>
       </div>
+
+      <%= render "book_comments/book_comment_form", book: @book, comment: @comment %>
+
     </div>
   </div>
 </div>
